@@ -1,0 +1,244 @@
+/* start header */
+header{
+    background-color: var(--primary);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+header nav a{
+    transition: all 0.3s ease-in-out;
+    font-size: large;
+    font-weight: bold;
+}
+header nav a:hover{
+    color: var(--secundary);
+}
+/* end header */
+/* start avatar */
+.avatar,.about{
+    background-color: var(--secundary);
+}
+.avatar .container, .avatar .container .data,.about .container,.contact .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.avatar .container .data, .avatar .container .data .lines,.portfolio .container .lines,.about .container .lines,.contact .lines{
+    width: 100%;
+    gap: 16px;
+}
+.avatar .container .data .lines,.portfolio .container .lines,.about .container .lines,.contact .lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar .container .data p{
+    font-size: x-large;
+}
+.avatar .container .data h2{
+    font-size: 70px
+}
+.avatar .container .data .line,.about .container .line{
+    width: 10%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.avatar .avatarimg{
+    width: 20%;
+}
+.avatar .avatarimg img{
+    width: 100%;
+}
+/* end avatar */
+/* start portfolio */
+.portfolio h3,.about h3,.contact h3{
+    font-size: 50px;
+    color: var(--primary);
+    text-align: center;
+    margin: 20px 0;
+}
+.portfolio .lines,.contact .lines{
+    margin-bottom: 2%;
+}
+.portfolio .lines .line,.contact .lines .line{
+    width: 10%;
+    height: 4px;
+    background-color:var(--primary);
+    border-radius: 5px;
+}
+.portfolio .lines svg ,.contact .lines svg{
+    fill:var(--primary);
+}
+.portfolio .card{
+    flex-grow: 1;
+    margin: 1%;
+    width: 30%;
+    aspect-ratio: 18 / 13;
+    background-size: contain;
+    border-radius: 10px;
+}
+.portfolio .card::before{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content:url(./../img/plus-solid.svg);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 188, 156, 0.918);
+    opacity: 0;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.portfolio .card:hover::before{
+    opacity: 1;
+}
+/* end portfolio */
+/* start about */
+.about h3{
+    color: #fff;
+}
+.about .row{
+    align-items: flex-start;
+    justify-content:center;
+}
+.about .row p{
+    padding: 40px 20px;
+    width: 35%;
+    font-size: 21px;
+}
+.about .button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1%;
+    width:20%;
+    border: #fff 2px solid;
+    border-radius: 8px;
+    padding:18px;
+    font-size: 19px;
+    font-weight:500;
+    fill:#fff;
+    transition: all 0.3s ease-in-out;
+}
+.about .button:hover{
+    background-color: #fff;
+}
+.about .button:hover svg{
+    fill:black
+}
+.about .button:hover p{
+    color: black;
+}
+/* end about */
+/* start contact */
+.contact .container form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+.contact form .input-group{
+    position: relative;
+}
+.contact form input,.contact form textarea{
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid #0000008f;
+}
+.contact form textarea{
+    height: 25vh;
+}
+.contact form textarea,.contact form input{
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size:x-large;
+}
+.contact form button{
+    width: fit-content;
+    color: #fff;
+    padding: 20px 25px;
+    font-size: large;
+    border: none;
+    border-radius: 8px ;
+    background-color:rgba(26, 188, 156, 0.685);
+}
+.contact .input-container{
+    position: relative;
+}
+.input-container input::placeholder,.input-container textarea::placeholder {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+.input-container input:focus::placeholder,.input-container textarea:focus::placeholder {
+    transform: translateY(-20px);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.459);
+}
+/* end contact */
+/* start footer */
+footer{
+    background-color: var(--footer-coler);
+}
+footer .row{
+    justify-content: space-around;
+    padding: 2%;
+}
+footer .row .location , footer .row .the-wep, footer .row .Freelancer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    gap: 10px;
+    width: 25%;
+}
+footer .row h4{
+    font-size: 25px;
+}
+footer .row P,footer .row address{
+    font-size: 20px;
+    color: #fff;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+footer .row .icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer .row .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:18%;
+    aspect-ratio: 1/1;
+    border: #fff 2px solid;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+footer .row .icon svg{
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+}
+footer .row .icon:hover svg{
+    fill: var(--footer-coler);
+}
+footer .row .icon:hover{
+    background-color: #fff;
+}
+footer .row P a{
+    color: var(--secundary);
+    text-decoration: underline;
+}
+footer .row P a:hover{
+    color:rgba(26, 188, 156, 0.664);
+}
+/* end footer */
